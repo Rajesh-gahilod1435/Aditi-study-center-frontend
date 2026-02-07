@@ -1,0 +1,370 @@
+/* /CSS/About.css */
+
+/* ============== Reset & General ============== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* ============== Navbar ============== */
+.navbar {
+  background: rgba(15, 15, 35, 0.95);
+
+  /* background: linear-gradient(135deg, #1e3a8a, #3b82f6); */
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+  color: #ffeb3b;
+}
+
+.btn {
+  background-color: #ffeb3b;
+  color: #1e3a8a !important;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: #fde047;
+  transform: translateY(-2px);
+}
+
+/* Mobile menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+
+ .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      width: 30px;
+      height: 3px;
+      background: white;
+      transition: all 0.3s ease;
+    }
+@media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 70px;
+        right: 0;
+        width: 40%;                   /* aapki requirement */
+        height: calc(100vh - 70px);   /* poori remaining height */
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 3rem;
+        transform: translateX(100%);  /* hidden off-screen */
+        transition: transform 0.4s ease;
+        z-index: 999;
+        display: none;
+      }
+      
+
+      .nav-menu.active {
+        transform: translateX(0);
+        display: flex;
+      }
+
+      .nav-menu li {
+        margin: 1.2rem 0;
+      }
+
+      .nav-link {
+        font-size: 1.4rem;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+      }
+}
+}
+
+/* ============== About Section ============== */
+.course {
+  padding: 60px 20px;
+  background: white;
+  text-align: center;
+}
+
+.Our_Facility {
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+
+.Text_Facility {
+  font-size: 2.8rem;
+  color: #1e3a8a;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.Facility_P {
+  font-size: 1.1rem;
+  color: #4b5563;
+  max-width: 760px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Card Row */
+.rowCardCont {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.course-col {
+  flex: 1;
+  min-width: 320px;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-col:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.imageBox {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* You can replace these with actual images later */
+.Card01_Img .imageBox { background-image: url('/image/vision.jpg'); }
+.Card02_Img .imageBox { background-image: url('/image/CHOOSE.jpg'); }
+
+.content {
+  padding: 1.8rem;
+}
+
+.Text_Canteen, .Text_Canteen02 {
+  font-size: 1.5rem;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+/* ============== Why Choose Us Section ============== */
+#whychooseus {
+  padding: 80px 20px;
+  background: #f1f5f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: #4b5563;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.2rem;
+  background: #eff6ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.feature-title {
+  font-size: 1.35rem;
+  color: #1e3a8a;
+  margin-bottom: 0.8rem;
+}
+
+.feature-desc {
+  color: #64748b;
+  font-size: 0.98rem;
+}
+
+/* ============== Footer ============== */
+footer#footer {
+  background: #0f172a;
+  color: white;
+  padding: 60px 20px 40px;
+  text-align: center;
+}
+
+.about-1 {
+  margin-bottom: 3rem;
+}
+
+.All_H1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer_P {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.box_cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.box_cont > div {
+  padding: 1.5rem;
+}
+
+.box_cont h4 {
+  font-size: 1.3rem;
+  margin: 1rem 0 0.6rem;
+  color: #60a5fa;
+}
+
+.box_cont p {
+  font-size: 1rem;
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+.box_cont img {
+  margin-bottom: 0.8rem;
+}
+
+/* Social icons small */
+.box_cont span img {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .Text_Facility {
+    font-size: 2.3rem;
+  }
+
+  .section-title {
+    font-size: 2.1rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}   

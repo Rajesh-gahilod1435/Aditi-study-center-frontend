@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditi Study Center - Admin Dashboard</title>
+    <link rel="stylesheet" href="/CSS/Admin.css">
+</head>
+<body>
+   
+
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+
+      <a href="#" class="logo">Aditi Study Center</a>
+      <!-- Navigation Links -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/HTML/index.html" class="nav-link">Home</a></li>
+        <li onclick="aboutFunc()"><a href="/HTML/About.html" class="nav-link">About</a></li>
+        <li><a href="#footer" tabindex="3" id="contact-link" class="nav-link">Contact</a></li>
+
+            <li id="Admin_dashboardBtn" class="nav-link"><a class="nav-link"  href="/HTML/Admin.html" 
+            class="btn ">Admin Dashboard</a></li>
+
+        <li id="logoutBtn" ><a href="#" class="nav-link" onclick="handleLogout()"
+            class="btn hidden">Logout</a></li>
+      </ul>
+      <!-- Mobile Menu Toggle -->
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+  </nav>
+
+
+    <div class="dashboard">
+        <!-- KPI Cards -->
+        <div class="grid">
+            <div class="card">
+                <h3>Total Students</h3>
+                <p id="studentCount">248</p>
+            </div>
+            <div class="card">
+                <h3>Active Batches</h3>
+                <p id="batchCount">10</p>
+            </div>
+            <div class="card">
+                <h3>Today's Attendance</h3>
+                <p>92%</p>
+            </div>
+            <div class="card">
+                <h3>Pending Fees</h3>
+                <p id="fees">₹45,200</p>
+            </div>
+        </div>
+
+        <div class="formContainer" id="formContainer"></div>
+
+
+       
+
+
+
+
+
+
+<!-- Students Section -->
+<h2 class="section-title">Students</h2>
+<div class="search-container">
+    <input type="text" id="studentSearch" placeholder="Search by name or batch..." onkeyup="searchTable('studentTable', this.value)">
+</div>
+<div class="Studentcontenair">
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Batch</th>
+                <th>Contact</th>
+                <th>Fees Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- rows here -->
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Batches Section -->
+<h2 class="section-title">Batches</h2>
+<div class="Studentcontenair">
+    <table id="BatchTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Batch Name</th>
+                <th>Subject</th>
+                <th>Timing</th>
+                <th>Strength</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- rows here -->
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Recent Study Material -->
+<h2 class="section-title">Recent Study Material</h2>
+<div class="Studentcontenair">
+    <table id="studyMaterialTable">
+        <thead>
+            <tr>
+                <th>File Name</th>
+                <th>Subject</th>
+                <th>Uploaded By</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>NEET_2026_Physics_Notes.pdf</td>
+                <td>Physics</td>
+                <td>Prof. Anil</td>
+                <td>22 Jan 2026</td>
+                <!-- <td><button class="btn">Download</button></td> -->
+            </tr>
+            <tr>
+                <td>Maths_Chapter_5_Video.mp4</td>
+                <td>Mathematics</td>
+                <td>Prof. Sneha</td>
+                <td>20 Jan 2026</td>
+                <!-- <td><button class="btn">Download</button></td> -->
+            </tr>
+            <tr>
+                <td>Maths_Chapter_5_Video.mp4</td>
+                <td>Mathematics</td>
+                <td>Prof. Sneha</td>
+                <td>20 Jan 2026</td>
+                <!-- <td><button class="btn">Download</button></td> -->
+            </tr>
+            <tr>
+                <td>Maths_Chapter_5_Video.mp4</td>
+                <td>Mathematics</td>
+                <td>Prof. Sneha</td>
+                <td>20 Jan 2026</td>
+                <!-- <td><button class="btn">Download</button></td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Upcoming Special Days / Events -->
+<h2 class="section-title">Upcoming Special Days / Events</h2>
+<div class="Studentcontenair">
+    <table id="eventsTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Event</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>26 Jan 2026</td>
+                <td>Republic Day</td>
+                <td>Holiday - No classes</td>
+            </tr>
+            <tr>
+                <td>28 Jan 2026</td>
+                <td>Unit Test 3</td>
+                <td>Physics & Chemistry - Batch A1 & A2</td>
+            </tr>
+            <tr>
+                <td>30 Jan 2026</td>
+                <td>Parent Meeting</td>
+                <td>Evening session for 11th batches</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+        <!-- Add Buttons -->
+        <div style="margin-top: 2rem; text-align: center;">
+            <button class="btn" onclick="AddStudent()" >+ Add New Student</button>
+            <button class="btn" >+ Add New Batch</button>
+            <button onclick="openForm()" class="btn">+ Batch Update</button>
+            <button class="btn" onclick="studyMaterial()">+ Upload Study Material</button>
+            <button class="btn" onclick="addSpecialEvent()">+ Add Special Event</button>
+            
+        </div>
+
+    </div>
+
+    <div id="addFroms" class="hide"></div>
+
+    <script src="/JS/Admin.js"></script>
+
+</body>
+</html>

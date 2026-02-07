@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAditi Study Center - Dashboard</title>
+  <link rel="stylesheet" href="/CSS/Dashbord.css" />
+</head>
+
+<body>
+
+
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <a href="#" class="logo">Aditi Study Center</a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/HTML/index.html" class="nav-link">Home</a></li>
+        <li onclick="aboutFunc()"><a href="/HTML/About.html" class="nav-link">About</a></li>
+        <li><a href="#footer" tabindex="3" id="contact-link" class="nav-link">Contact</a></li>
+        <li id="loginBtn"><a class="nav-link" onclick="handleLogin()">Login</a></li>
+        <li id="signupBtn"><a class="nav-link" onclick="openSignup()">Signup</a></li>
+        <li id="dashboardBtn" style="display: none;"><a href="/HTML/Dashboard.html" class="nav-link"
+            class="btn">Dashboard</a></li>
+        <li id="logoutBtn" style="display: none;"><a href="#" class="nav-link" onclick="handleLogout()"
+            class="btn">Logout</a></li>
+      </ul>
+      
+      <!-- Mobile Menu Toggle -->
+      <div class="menu-toggle " id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <div class="dashboard-container">
+
+    <div class="welcome-section" id="usernameDisplay">
+
+      <h1 id="welcomeMsg">Welcome, [User Name]!</h1>
+
+    </div>
+
+    <div class="dashboard-card profile-info">
+      <h3>Your Profile</h3>
+      <ul>
+        <li><i class="fas fa-user"></i> <strong>Name:</strong> <span id="username">[User Name]</span></li>
+        <li><i class="fas fa-envelope"></i> <strong>Email:</strong> <span id="email">[User Email]</span></li>
+        <li><i class="fas fa-book"></i> <strong>Mobile:</strong> <span id="mobile">[User Course]</span></li>
+        <li><i class="fas fa-users"></i> <strong>Batch:</strong> <span id="batch">[User Batch]</span></li>
+      </ul>
+      <button id="editProfileBtn" onclick="openEditProfile()">Edit Profile</button>
+    </div>
+
+    <div id="editProfileModal" class=" hide"></div>
+
+
+    <div class="dashboard-card schedule-list">
+      <h3>Your Study Schedule</h3>
+      <ul>
+        <li>
+          <p><i class="fas fa-users"></i> <strong>Batch:</strong> <span id="batchCode">[User Batch]</span></p>
+        </li>
+        <li><i class="fas fa-calendar-alt"></i> <span id="batchTiming">Monday: Mathematics - 10:00 AM - 12:00
+            PM</span> </li>
+
+      </ul>
+      <button  onclick="openSchedule('batchModal')">View Full Schedule</button>
+    </div>
+
+    <div id="viewFullSchedule" class="hide"></div>
+
+    <div class="dashboard-card resources-list">
+      <h3>Study Resources</h3>
+      <ul>
+        <li><i class="fas fa-file-pdf"></i> <a href="#">Mathematics Notes - Chapter 1</a></li>
+        <li><i class="fas fa-file-pdf"></i> <a href="#">Physics Lab Manual</a></li>
+        <li><i class="fas fa-file-pdf"></i> <a href="#">Study Tips PDF</a></li>
+      </ul>
+      <button onclick="openAllResources()">View All Resources</button>
+    </div>
+
+    <div id="Resources" class="hide"></div>
+
+    <div class="dashboard-card payment-service">
+      <h3 id="batchFee">Payment Service</h3>
+      <ul>
+        <li><i class="fas fa-money-check-alt">
+
+          </i> <strong>Status:</strong> <span class="status paid">[Payment Status]</span>
+          <!-- <strong>Status:</strong> <span
+              class="status [Payment Status Class]">[Payment Status]</span> -->
+        </li>
+        <li><i class="fas fa-history"></i> <a href="#" onclick="openPaymentHistory()">Last Payment: [Last Payment
+            Date]</a></li>
+        <li><i class="fas fa-credit-card"></i> <a href="#" onclick="openMakePayment()">Due Amount : <span id="Amount"
+              style="color: green;">[Due Amount]</span></a></li>
+      </ul>
+      <!-- <div> -->
+      <button onclick="openpaymentfrom()">Make Payment</button>
+      <button onclick="openPaymentHistory()">View Payment History</button>
+      <!-- </div> -->
+    </div>
+    
+
+    <div id="paymentContenair" class="hide"></div>
+
+    <!-- </div> -->
+     
+    <div class="dashboard-card Attendace-service">
+      <h3 id="batchFee">Attendance Service</h3>
+
+    <table class="attendance-table">
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>Date</th>
+      <th>IN Time</th>
+      <th> OUT Time</th>
+      <th>S </th>
+    </tr>
+  </thead>
+  <tbody id="attendanceTable"></tbody>
+</table>
+
+</div>
+
+  </div>
+
+
+  <!-- Contact Info -->
+  <footer id="footer">
+    <div class="about-1">
+      <h1 class="All_H1">CONTACT US</h1>
+      <p class="footer_P">We are here to help you with any queries. Feel free to reach out!</p>
+    </div>
+
+    <div class="box_cont">
+      <div>
+        <!-- <i class="fa-solid fa-phone"></i> -->
+        <img src="/image/call.png" alt="Location Icon" style="width:35px; height:35px;">
+
+        <h4>CALL US</h4>
+        <p>+91 9545411025</p>
+        <p>+91 8956132621</p>
+      </div>
+
+      <div>
+        <img src="/image/mail.png" alt="Email Icon" style="width:35px; height:35px;">
+
+        <i class="fa-solid fa-envelope"></i>
+        <h4>EMAIL</h4>
+        <p>aaditistudycenter@gmail.com</p>
+        <p>info@aditistudycentre.com</p>
+      </div>
+
+      <div>
+        <!-- <i class="fa fa-map-marker"></i> -->
+        <!-- <i class="fa-sharp fa-solid fa-location-dot"></i>
+                  -->
+        <img src="/image/placeholder.png" alt="Location Icon" style="width:35px; height:35px;">
+        <h4>OFFICE LOCATION</h4>
+        <p>25, Ravindra Nagar, Near Tilak Nagar, Behind Kandharkar Hospital, Aurangabad 431005.</p>
+      </div>
+
+      <div>
+        <!-- <i class="fa fa-globe"></i> -->
+        <img src="/image/social.png" alt="SOCIAL Icon" style="width:35px; height:35px;">
+
+        <h4>SOCIAL MEDIA</h4>
+        <p><span> <img src="/image/instagram.png" alt="" style="width:15px; height:15px;"> </span> aaditi_study_centre
+        </p>
+        <p><span> <img src="/image/fb.png" alt="" style="width:15px; height:15px;"> </span> aaditi_study_centre</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <script src="/JS/registration.js"></script>
+
+<!-- <script src="https://checkout.razorpay.com/v1/checkout.js"></script> -->
+
+</body>
+
+</html>

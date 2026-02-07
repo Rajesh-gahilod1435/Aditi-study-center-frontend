@@ -1,0 +1,480 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* recommended for consistent sizing */
+}
+
+body {
+  background: #f9f9f9;
+}
+
+/* Navbar styling */
+.navbar {
+  background: rgba(15, 15, 35, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-size: clamp(15px, 1.6vw, 18px); */
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+.nav-link:hover {
+  background-color: #555;
+  transition: 0.5s;
+  text-decoration: underline red;
+}
+
+
+/* Mobile menu toggle */
+/* .menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.3s;
+} */
+
+
+
+#s-text {
+  cursor: default;
+}
+
+.welcome-sub {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  max-width: 850px;
+  margin: 0 auto 40px;
+
+}
+
+
+
+
+.header {
+  width: 100%;
+  height: 100vh;
+  /* min-height: 100vh; */
+  position: relative;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/image/background.avif') center/cover no-repeat;
+  /* no-repeat center center fixed; */
+  background-size: cover;
+}
+
+
+/* SMART & SPADEFUL STUDY CENTER */
+.text-box {
+  width: 100%;
+  color: #fff;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-align: center;
+}
+
+/* -----OUR FACILITY----- */
+
+.course {
+  background: #f0f8ff;
+
+}
+
+
+.Our_Facility {
+  /* color: #615f5f; */
+  text-align: center;
+  cursor: default;
+
+}
+
+
+
+
+/* Card Image */
+.Card01_Img {
+  background-image: url(/image/room-interior-design.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.Card02_Img {
+  background-image: url(/image/Discasion.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.Card03_Img {
+  background-image: url(/image/Canteen.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.rowCardCont {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.Card {
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: 0.5s ease;
+  width: clamp(18rem, 60vw, 25rem);
+  height: 200px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.Card:hover {
+  box-shadow: 20px 20px 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Home page Card */
+.container1 {
+  position: relative;
+  background: white;
+  overflow: hidden;
+}
+
+.container1 .imageBox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  transform: .5s;
+}
+
+.container1 .content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: #fff3f3;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  transform-origin: left;
+  transition: .5s;
+  transform: rotateY(90deg);
+}
+
+.container1 .content h3 {
+  color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: start;
+  overflow: hidden;
+
+}
+
+.container1 .content p {
+  color: #777;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+  text-align: left;
+}
+
+.container1:hover .content {
+  transform: rotateY(0deg);
+
+}
+
+
+/* -----campus----- */
+.All_H1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #4A86E8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+  cursor: default;
+  overflow: hidden;
+  padding: 25px;
+}
+
+.All_P_Tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.welcome-text {
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: clamp(15px, 1.6vw, 18px);
+  padding: 5px;
+
+}
+
+.row_Campus {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+
+}
+
+.campus {
+  text-align: center;
+  background: #f0f8ff;
+  padding-bottom: 30px;
+}
+
+.campus-col {
+  width: clamp(18rem, 60vw, 24rem);
+  height: 490px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  background: rgba(0, 0, 0, 0.4);
+  /* semi-transparent overlay */
+}
+
+.layer:hover {
+  background: rgba(226, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.layer h3 {
+  width: 100%;
+  font-weight: 700;
+  color: #fff;
+  font-size: 26px;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  font-family: "Source Code Pro", monospace;
+
+}
+
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+
+.facilities-col img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.campus-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-fit: cover;
+}
+
+
+/* Footer / Contact */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 60px 20px 20px;
+}
+
+.box_cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.box_cont div {
+  text-align: center;
+}
+
+.box_cont i {
+  font-size: 40px;
+  color: #4a90e2;
+  margin-bottom: 15px;
+}
+
+.box_cont h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #fff;
+  
+}
+
+.footer_P {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  /* color: #ccc; */
+  color: #fff;
+
+  text-align: center;
+  padding-bottom: 20px;
+
+}
+.box_cont p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+
+  .rowCardCont,
+  .row_Campus,
+  .box_cont {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+}
+
+.menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      width: 30px;
+      height: 3px;
+      background: white;
+      transition: all 0.3s ease;
+    }
+@media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 70px;
+        right: 0;
+        width: 40%;                   /* aapki requirement */
+        height: calc(100vh - 70px);   /* poori remaining height */
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 3rem;
+        transform: translateX(100%);  /* hidden off-screen */
+        transition: transform 0.4s ease;
+        z-index: 999;
+        display: none;
+      }
+      
+
+      .nav-menu.active {
+        transform: translateX(0);
+        display: flex;
+      }
+
+      .nav-menu li {
+        margin: 1.2rem 0;
+      }
+
+      .nav-link {
+        font-size: 1.4rem;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Hamburger → X animation */
+      .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+      .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -8px);
+      }
+    }
+
+
+
+.hidden {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+

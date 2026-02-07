@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AAditi Study Center</title>
+  <link rel="stylesheet" href="/CSS/style.css" />
+  <link rel="stylesheet" href="/CSS/Login.css">
+  <link rel="stylesheet" href="/CSS/Registration.css">
+
+
+</head>
+
+<body>
+  
+  <nav class="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+
+      <a href="#" class="logo">Aditi Study Center</a>
+      <!-- Navigation Links -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/HTML/index.html" class="nav-link">Home</a></li>
+        <li onclick="aboutFunc()"><a href="/HTML/About.html" class="nav-link">About</a></li>
+        <li><a href="#footer" tabindex="3" id="contact-link" class="nav-link">Contact</a></li>
+
+        <li id="loginBtn"><a class="nav-link" onclick="handleLogin()">Login</a></li>
+
+        <li id="AdminloginBtn"><a class="nav-link" onclick="AdminLogin()" >Admin/Login</a></li>
+
+        <li id="signupBtn"><a class="nav-link" onclick="openSignup()">Signup</a></li>
+
+        <li id="dashboardBtn" ><a href="/HTML/Dashboard.html" class="nav-link"
+            class="btn hidden">Dashboard</a></li>
+
+            <li id="Admin_dashboardBtn" class="nav-link"><a class="nav-link"  href="/HTML/Admin.html" 
+            class="btn ">Admin Dashboard</a></li>
+
+        <li id="logoutBtn" ><a href="#" class="nav-link" onclick="handleLogout()"
+            class="btn hidden">Logout</a></li>
+      </ul>
+      <!-- Mobile Menu Toggle -->
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </div>
+  </nav>
+
+  <section class="header">
+  </section>
+
+
+
+  <div class="text-box">
+    <p class="welcome-sub">Your journey to knowledge and success starts here. Join us to learn, grow, and achieve your
+      dreams.</p>
+  </div>
+
+  <!-- OUR FACILITY -->
+  <section class="course ">
+    <div class="Our_Facility">
+      <h1 class="Text_Facility All_H1">OUR FACILITY</h1>
+      <span class="P_Tag_Padding">
+        <p class="All_P_Tag">
+          A person table, chear & chear sheet proper agrren, Wi-Fi, ac,fan minirul water.
+          A person table, chear & chear sheet proper agrren, Wi-Fi, ac,fan minirul water, cantin, discution cabin,
+          tea/coffi with breckfast book stoar loaker</p>
+      </span>
+    </div>
+
+    <div class="rowCardCont ">
+      <div class=" canteen_Cont Card Card01_Img container1  " id="CardId">
+        <div class="imageBox Card01_Img ">
+        </div>
+        <div class="content" id="TextCard">
+          <h3 class="Text_Canteen">STUDY ROOM </h3>
+          <p class="">
+            "In the library, each candidate has one chair and one designated space for books, along with a charging
+            point."
+          </p>
+        </div>
+      </div>
+
+      <div class=" Card02_Img container1  Card">
+        <div class="imageBox  Card02_Img">
+        </div>
+        <div class="content02_Text  content">
+          <h3 class="Text_Canteen02"> DISCUSSION ROOM </h3>
+          <p class="P_Discu">
+            "We have a silent and peaceful discussion room where you can conduct meetings and interviews,
+            allowing two people to discuss with each other."
+          </p>
+        </div>
+      </div>
+
+      <div class=" Card03_Img Card container1">
+        <div class="imageBox Card03_Img">
+        </div>
+        <div class="content02_Text  content">
+          <h3 class="Text_Canteen">CANTEEN </h3>
+          <p>
+            "We have a beautiful canteen where you can store your tiffin box and enjoy your meal."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- -----campus----- -->
+  <section class="campus">
+    <div class="Our0_campus_Header">
+      <h1 class="All_H1"> OUR CAMPUS </h1>
+      <span class="P_Tag_Padding">
+        <p class="All_P_Tag"> Our campus is clean, spacious, and beautifully maintained, providing a calm,
+          safe, and inspiring environment where students can focus on learning and growth.</p>
+      </span>
+    </div>
+    <div class="row_Campus">
+      <div class="campus-col">
+        <img src="/image/Gate.jpg">
+        <div class="layer">
+          <h3> ENTRY GATE </h3>
+        </div>
+      </div>
+
+      <div class="campus-col">
+        <img src="/image/parking.jpg">
+        <div class="layer">
+          <h3>PARKING PLACE</h3>
+        </div>
+      </div>
+
+      <div class="campus-col">
+        <img src="/image/building.jpg">
+        <div class="layer">
+          <h3>BUILDING</h3>
+        </div>
+      </div>
+
+
+    </div>
+
+  </section>
+
+  <footer id="footer">
+    <div class="about-1">
+      <h1 class="All_H1">CONTACT US</h1>
+      <p class="footer_P">We are here to help you with any queries. Feel free to reach out!</p>
+    </div>
+
+    <div class="box_cont">
+      <div>
+        <img src="/image/call.png" alt="Location Icon" style="width:35px; height:35px;">
+
+        <h4>CALL US</h4>
+        <p>+91 9545411025</p>
+        <p>+91 8956132621</p>
+      </div>
+
+      <div>
+        <img src="/image/mail.png" alt="Email Icon" style="width:35px; height:35px;">
+
+        <i class="fa-solid fa-envelope"></i>
+        <h4>EMAIL</h4>
+        <p>aaditistudycenter@gmail.com</p>
+        <p>info@aditistudycentre.com</p>
+      </div>
+
+      <div>
+        
+        <img src="/image/placeholder.png" alt="Location Icon" style="width:35px; height:35px;">
+        <h4>OFFICE LOCATION</h4>
+        <p>25, Ravindra Nagar, Near Tilak Nagar, Behind Kandharkar Hospital, Aurangabad 431005.</p>
+      </div>
+
+      <div>
+        <img src="/image/social.png" alt="SOCIAL Icon" style="width:35px; height:35px;">
+
+        <h4>SOCIAL MEDIA</h4>
+        <p><span> <img src="/image/instagram.png" alt="" style="width:15px; height:15px;"> </span> aaditi_study_centre
+        </p>
+        <p><span> <img src="/image/fb.png" alt="" style="width:15px; height:15px;"> </span> aaditi_study_centre</p>
+      </div>
+    </div>
+  </footer>
+
+    <div class="modal-content hidden" id="AdminLogin"></div>
+<div id="signupModal" class="modal-overlay-regis hidden" ></div>
+
+  <script src="/JS/index.js"></script>
+  <script src="/JS/registration.js"></script>
+  
+</body>
+</html>
