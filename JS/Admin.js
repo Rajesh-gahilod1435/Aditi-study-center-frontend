@@ -7,7 +7,7 @@ const token = localStorage.getItem("token");
 
 if (!token || role !== "ADMIN") {
   alert("Unauthorized Access! Please login as Admin.");
-  window.location.href = "index.html"; // login / home page
+  window.location.href = "../index.html"; // login / home page
 }
  
 
@@ -311,7 +311,7 @@ function handleLogout() {
   localStorage.clear();
 //   checkLoginStatus();
   alert("You have been logged out.");
-  window.location.href = "index.html";
+  window.location.href = "../index.html";
 }
 
 

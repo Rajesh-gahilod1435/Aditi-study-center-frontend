@@ -64,7 +64,7 @@ function handleLogout() {
   localStorage.clear();
   checkLoginStatus();
   alert("You have been logged out.");
-  window.location.href = "index.html";
+  window.location.href = "../index.html";
 }
 
 /******************
@@ -77,7 +77,7 @@ window.onload = function () {
   if (window.location.pathname.includes("Dashboard.html")) {
     let user = JSON.parse(localStorage.getItem("user"));
     if (!user) {
-      window.location.href = "/HTML/Login.html";
+      window.location.href = "../HTML/Login.html";
       return;
     }
     // Welcome name
