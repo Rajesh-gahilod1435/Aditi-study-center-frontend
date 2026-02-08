@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AAditi Study Center - Dashboard</title>
-  <link rel="stylesheet" href="/CSS/Dashbord.css" />
+  <link rel="stylesheet" href="../CSS/Dashbord.css" />
 </head>
 
 <body>
@@ -18,12 +18,12 @@
       <a href="#" class="logo">Aditi Study Center</a>
 
       <ul class="nav-menu" id="navMenu">
-        <li><a href="/index.html" class="nav-link">Home</a></li>
-        <li onclick="aboutFunc()"><a href="/HTML/About.html" class="nav-link">About</a></li>
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li onclick="aboutFunc()"><a href="../HTML/About.html" class="nav-link">About</a></li>
         <li><a href="#footer" tabindex="3" id="contact-link" class="nav-link">Contact</a></li>
         <li id="loginBtn"><a class="nav-link" onclick="handleLogin()">Login</a></li>
         <li id="signupBtn"><a class="nav-link" onclick="openSignup()">Signup</a></li>
-        <li id="dashboardBtn" style="display: none;"><a href="/HTML/Dashboard.html" class="nav-link"
+        <li id="dashboardBtn" style="display: none;"><a href="Dashboard.html" class="nav-link"
             class="btn">Dashboard</a></li>
         <li id="logoutBtn" style="display: none;"><a href="#" class="nav-link" onclick="handleLogout()"
             class="btn">Logout</a></li>
@@ -95,24 +95,20 @@
         <li><i class="fas fa-money-check-alt">
 
           </i> <strong>Status:</strong> <span class="status paid">[Payment Status]</span>
-          <!-- <strong>Status:</strong> <span
-              class="status [Payment Status Class]">[Payment Status]</span> -->
+         
         </li>
         <li><i class="fas fa-history"></i> <a href="#" onclick="openPaymentHistory()">Last Payment: [Last Payment
             Date]</a></li>
         <li><i class="fas fa-credit-card"></i> <a href="#" onclick="openMakePayment()">Due Amount : <span id="Amount"
               style="color: green;">[Due Amount]</span></a></li>
       </ul>
-      <!-- <div> -->
       <button onclick="openpaymentfrom()">Make Payment</button>
       <button onclick="openPaymentHistory()">View Payment History</button>
-      <!-- </div> -->
     </div>
     
 
     <div id="paymentContenair" class="hide"></div>
 
-    <!-- </div> -->
      
     <div class="dashboard-card Attendace-service">
       <h3 id="batchFee">Attendance Service</h3>
@@ -144,8 +140,7 @@
 
     <div class="box_cont">
       <div>
-        <!-- <i class="fa-solid fa-phone"></i> -->
-        <img src="/image/call.png" alt="Location Icon" style="width:35px; height:35px;">
+        <img src="../image/call.png" alt="Location Icon" style="width:35px; height:35px;">
 
         <h4>CALL US</h4>
         <p>+91 9545411025</p>
@@ -153,7 +148,7 @@
       </div>
 
       <div>
-        <img src="/image/mail.png" alt="Email Icon" style="width:35px; height:35px;">
+        <img src="../image/mail.png" alt="Email Icon" style="width:35px; height:35px;">
 
         <i class="fa-solid fa-envelope"></i>
         <h4>EMAIL</h4>
@@ -162,31 +157,27 @@
       </div>
 
       <div>
-        <!-- <i class="fa fa-map-marker"></i> -->
-        <!-- <i class="fa-sharp fa-solid fa-location-dot"></i>
-                  -->
-        <img src="/image/placeholder.png" alt="Location Icon" style="width:35px; height:35px;">
+    
+        <img src="../image/placeholder.png" alt="Location Icon" style="width:35px; height:35px;">
         <h4>OFFICE LOCATION</h4>
         <p>25, Ravindra Nagar, Near Tilak Nagar, Behind Kandharkar Hospital, Aurangabad 431005.</p>
       </div>
 
       <div>
-        <!-- <i class="fa fa-globe"></i> -->
-        <img src="/image/social.png" alt="SOCIAL Icon" style="width:35px; height:35px;">
+        <img src="../image/social.png" alt="SOCIAL Icon" style="width:35px; height:35px;">
 
         <h4>SOCIAL MEDIA</h4>
-        <p><span> <img src="/image/instagram.png" alt="" style="width:15px; height:15px;"> </span> aaditi_study_centre
+        <p><span> <img src="../image/instagram.png" alt="" style="width:15px; height:15px;"> </span> aaditi_study_centre
         </p>
-        <p><span> <img src="/image/fb.png" alt="" style="width:15px; height:15px;"> </span> aaditi_study_centre</p>
+        <p><span> <img src="../image/fb.png" alt="" style="width:15px; height:15px;"> </span> aaditi_study_centre</p>
       </div>
     </div>
   </footer>
 
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
-  <script src="/JS/registration.js"></script>
+  <script src="../JS/registration.js"></script>
 
-<!-- <script src="https://checkout.razorpay.com/v1/checkout.js"></script> -->
 
 </body>
 
