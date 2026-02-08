@@ -138,17 +138,19 @@ body {
   background-size: cover;
   background-position: center;
 }
+
 .Card02_Img {
   background-image: url("https://rajesh-gahilod1435.github.io/Aditi-study-center-frontend/image/Discasion.jpeg");
-  background-position: center;
   background-size: cover;
+  background-position: center;
 }
 
 .Card03_Img {
   background-image: url("https://rajesh-gahilod1435.github.io/Aditi-study-center-frontend/image/Canteen.jpeg");
-  background-position: center;
   background-size: cover;
+  background-position: center;
 }
+
 
 .rowCardCont {
   display: flex;
